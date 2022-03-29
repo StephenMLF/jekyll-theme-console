@@ -71,6 +71,8 @@ footer { margin-bottom: 20px; }
  * Form
  */
 input, select, textarea { border: none; }
+input[type=checkbox]:disabled {background-color: #08938a
+}
 input[type=text], select, textarea { width: 100%;  resize: none;  background-color: var(--background-color);  color: var(--text-color);  caret-color: var(--text-color);  font-size: $base-font-size;  font-family: $base-font-family;  line-height: $base-line-height; }
 input, select, textarea, textarea::-webkit-input-placeholder { text-indent: 0px; }
 ::placeholder { color: var(--placeholder-color);  opacity: 1; }
