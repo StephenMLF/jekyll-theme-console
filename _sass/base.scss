@@ -14,7 +14,7 @@ $container-max-width:  600px !default;
 /**
  * Global
  */
-body {     text-shadow: -3px 0 1px cyan, 3px 0 1px red;  background-color: var(--background-color); cursor: url("aero_arrow_yellow_cyan.cur"), auto;  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
+body { background-color: var(--background-color); cursor: url("aero_arrow_yellow_cyan.cur"), auto;  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
 h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--text-color); }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 .code {color: #ff79bf !important;}
@@ -166,7 +166,7 @@ textarea { vertical-align: top; }
 figure.highlight { margin: 5px 0; }
 code {color: #ff79bf;}
 pre { background-color: var(--background-color);  border: none;  padding: 0;  margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; }
-.special {font-size: $base-font-size/1.5 !important; line-height: 1 !important; font-family: monospace !important; overflow:hidden; color: #ff79bf;}
+.special { text-shadow: -3px 0 1px cyan, 3px 0 1px red; font-size: $base-font-size/1.5 !important; line-height: 1 !important; font-family: monospace !important; overflow:hidden; color: #ff79bf;}
 .highlight .hll { background-color: var(--code-color-2); }
 .highlight .c { color: var(--code-color-1); font-style: italic } /* Comment */
 .highlight .err { color: var(--code-color-3); background-color: var(--code-color-4); } /* Error */
