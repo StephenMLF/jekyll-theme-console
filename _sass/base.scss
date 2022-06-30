@@ -68,7 +68,7 @@ ul {list-style-position: outside;}
 
 :not(.menu) > ul { list-style-type: initial; }
 
-:not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
+:not(.menu) > ul > li:before { content: "";  margin-right: 0px;  }
 
 :not(.menu) > li.task-list-item:before { content: "";  margin-right: 0px; }
 
