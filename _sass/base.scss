@@ -62,7 +62,11 @@ footer { margin-bottom: 20px; }
  * Lists
  */
 
-:not(.menu) > ul { list-style: none outside none; }
+:not(.menu) > ul { list-style: none; }
+
+ul {list-style-position: outside;}
+
+:not(.menu) > ul { list-style-type: none; }
 
 :not(.menu) > ul > li:before { content: "-";  margin-right: 9px; }
 
