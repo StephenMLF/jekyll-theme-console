@@ -70,7 +70,7 @@ ul {list-style-position: outside;}
 
 :not(.menu) > ul > li:before { content: "";  margin-right: 0px;  }
 
-:not(.menu) > li.task-list-item:before { content: "";  margin-right: 0px; }
+:not(.menu) > li.task-list-item:before { content: "";  margin-right: 0px; list-style-image: none; }
 
 :not(.menu) > ul.task-list {
 
