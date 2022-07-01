@@ -25,11 +25,11 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 
-  <META HTTP-EQUIV='Content-Security-Policy' CONTENT="default-src 'self' ; script-src 'self' 'unsafe-inline' *.googleapis.com; style-src 'self' 'unsafe-inline' a.disquscdn.com; img-src 'self' *; media-src 'self' ; frame-src disqus.com;">
+  <META HTTP-EQUIV='Content-Security-Policy' CONTENT="default-src 'self' ; script-src 'self' https://ajax.googleapis.com; style-src 'self' 'unsafe-inline' a.disquscdn.com; img-src 'self' *; media-src 'self' ; frame-src disqus.com;">
   
   {% if page.tipue_search_active or layout.tipue_search_active %}
   <link rel="stylesheet" href="{{ "/docs/assets/tipuesearch/css/normalize.css" | relative_url }}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="{{ "/docs/assets/tipuesearch/jquery.min.js" | relative_url }}"></script>
   <script src="{{ "/docs/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
   <link rel="stylesheet" href="{{ "/docs/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
   <script src="{{ "/docs/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
