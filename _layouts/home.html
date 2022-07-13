@@ -10,7 +10,8 @@ layout: default
     {%- for post in site.posts -%}
     {% assign post_month = post.date | date: "%m" %}
     {% if post_month != previous_post_month %}
-    <br><code>{{ post_month }}</code></br>
+    {% assign month_code = post.date | date: "%Y-%m" %}
+    <br><code>{{ month_code }}</code></br>
     {% endif %}
     <li>
       {%- assign date_format = "%Y-%m-%d" -%}
