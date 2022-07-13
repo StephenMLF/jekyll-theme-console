@@ -13,7 +13,7 @@ layout: default
       [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
       {% assign post_month = post.date | date: "%m" %}
       {% if post_month != previous_post_month %}
-      <br>
+      <br>New month yo<br>
       {% endif %}
       {% assign previous_post_month = post.date | date: "%m" %}
     </li>
