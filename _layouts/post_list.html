@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{{ content }}
+{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
+
+{%- if site.posts.size > 0 -%}
+  <ul>
+    {%- for post in site.posts -%}
+    {% assign post_month = post.date | date: "%m" %}
+    {% if post_month != previous_post_month %}
+    {% assign month_code = post.date | date: "%Y-%m" %}
+    <br><code>{{ month_code }}</code></br>
+    {% endif %}
+    <li>
+      {%- assign date_format = "%Y-%m-%d" -%}
+      [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </li>
+    {% assign previous_post_month = post.date | date: "%m" %}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}
