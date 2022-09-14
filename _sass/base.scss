@@ -11,10 +11,86 @@ $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
 
+
+
+
+// Colors
+$bg-color: black;
+$dot-color-1: black;
+$dot-color-2: hotpink;
+$animation-duration: 10s;
+
+// Dimensions
+$dot-size: 1px;
+
+@property --dot-size {
+  syntax: "<percentage>";
+  initial-value: 1%;
+  inherits: false;
+}
+
+@property --dot-color-1 {
+  syntax: "<color>";
+  initial-value: black;
+  inherits: false;
+}
+
+@property --dot-color-2 {
+  syntax: "<color>";
+  initial-value: hotpink;
+  inherits: false;
+}
+
+$dot-space: 100px;
+
+@keyframes ass {
+  0% {
+    --dot-size: 1%;
+    --dot-color-1: black;
+    --dot-color-2: hotpink;
+    background-position: 0 0, 0 0;
+  }
+  25% {
+    background-position: $dot-space/2 0px, 0px $dot-space/2;
+  }
+  50% {
+    --dot-color-1: orange;
+    --dot-color-2: black;
+    background-position: $dot-space/2 $dot-space/2, 0px 0px;
+  }
+  75% {
+    background-position: 0px $dot-space/2, $dot-space/2 0px;
+  }
+  100% {
+    --dot-size: 3%;
+    --dot-color-1: black;
+    --dot-color-2: hotpink;
+    background-position: 0 0, $dot-space/2 $dot-space/2;
+  }
+}
+
+
+
+
+
+
+
+
+
 /**
  * Global
  */
-body { background-color: #ff79bf; cursor: url("aero_arrow_yellow_cyan.cur"), auto;  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
+body {   background-color: #000;
+  background-image: 
+          radial-gradient(var(--dot-color-1) var(--dot-size), transparent var(--dot-size) ),
+          radial-gradient(var(--dot-color-2) var(--dot-size), transparent var(--dot-size) );
+  animation-name: ass;
+  animation-duration: $animation-duration;
+  background-size: $dot-space $dot-space;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  
+  cursor: url("aero_arrow_yellow_cyan.cur"), auto;  margin: 0 auto;  padding: 0;  font-family: $base-font-family;  font-size: $base-font-size;  color: var(--text-color);  text-align: left;  line-height: $base-line-height !important; }
 header, main, footer {background-color: var(--background-color);}
 h1, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: var(--code-color-15); }
 h2 { font-size: $base-font-size;  margin: 0px;  margin-top: 22px;  font-weight: bold;  color: #5cffd3; }
